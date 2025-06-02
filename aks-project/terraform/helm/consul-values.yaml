@@ -1,0 +1,6 @@
+global:
+  name: consul
+
+ui:
+  service:
+    type: LoadBalancer
