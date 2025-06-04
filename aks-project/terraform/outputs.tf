@@ -1,12 +1,11 @@
-output "kube_config" {
-  value     = azurerm_kubernetes_cluster.aks.kube_config_raw
-  sensitive = true
+output "kubeconfig" {
+  value = local_file.kubeconfig.filename
 }
 
-output "resource_group_name" {
-  value = azurerm_resource_group.aks.name
+output "ssh_private_key_path" {
+  value = local_file.private_key.filename
 }
 
-output "aks_cluster_name" {
+output "aks_name" {
   value = azurerm_kubernetes_cluster.aks.name
 }
